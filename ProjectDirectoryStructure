@@ -1,18 +1,62 @@
 hotel-management-system
-│
-├── src/main/java/com/example/hotelmanagement
-│   ├── controller/
-│   ├── model/
-│   ├── repository/
-│   ├── service/
-│   └── HotelManagementSystemApplication.java
-│
-├── src/main/resources/
-│   ├── templates/
-│   │   ├── index.html
-│   │   ├── login.html
-│   │   ├── room-list.html
-│   │   └── booking.html
-│   ├── application.properties
-│
-└── pom.xml
+├── .gitignore
+├── pom.xml                 # Maven build file
+├── README.md               # Project documentation
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── com
+│   │   │       └── hotel
+│   │   │           └── management
+│   │   │               ├── controller            # Controllers for HTTP requests
+│   │   │               │   ├── RoomController.java
+│   │   │               │   ├── BookingController.java
+│   │   │               │   └── UserController.java
+│   │   │               ├── model                 # JPA Entity Classes
+│   │   │               │   ├── Room.java
+│   │   │               │   ├── Booking.java
+│   │   │               │   └── User.java
+│   │   │               ├── repository            # Spring Data JPA Repositories
+│   │   │               │   ├── RoomRepository.java
+│   │   │               │   ├── BookingRepository.java
+│   │   │               │   └── UserRepository.java
+│   │   │               ├── service               # Business Logic / Service Layer
+│   │   │               │   ├── RoomService.java
+│   │   │               │   ├── BookingService.java
+│   │   │               │   └── UserService.java
+│   │   │               ├── HotelManagementSystemApplication.java  # Main Spring Boot Application
+│   │   │               └── config                # Configuration files (e.g., Spring Security, JPA, etc.)
+│   │   │                   └── WebSecurityConfig.java
+│   │   ├── resources
+│   │   │   ├── application.properties  # Configuration file (e.g., database, server)
+│   │   │   ├── static                  # Static resources like CSS, JS, Images
+│   │   │   │   ├── css
+│   │   │   │   │   └── style.css
+│   │   │   │   ├── js
+│   │   │   │   └── images
+│   │   │   ├── templates               # Thymeleaf templates (HTML files)
+│   │   │   │   ├── index.html
+│   │   │   │   ├── login.html
+│   │   │   │   ├── room-list.html
+│   │   │   │   ├── booking.html
+│   │   │   │   ├── register.html
+│   │   │   │   └── 404.html
+│   │   │   └── db
+│   │   │       └── init.sql           # Sample data and schema initialization
+│   └── test
+│       ├── java
+│       │   └── com
+│       │       └── hotel
+│       │           └── management
+│       │               ├── controller
+│       │               │   ├── RoomControllerTest.java
+│       │               │   ├── BookingControllerTest.java
+│       │               │   └── UserControllerTest.java
+│       │               ├── service
+│       │               │   ├── RoomServiceTest.java
+│       │               │   ├── BookingServiceTest.java
+│       │               │   └── UserServiceTest.java
+│       │               └── HotelManagementSystemApplicationTests.java
+│       ├── resources
+│       │   └── application-test.properties  # Test-specific properties
+├── target                          # Compiled files and build output (generated after running `mvn clean install`)
