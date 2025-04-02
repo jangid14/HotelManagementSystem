@@ -1,0 +1,18 @@
+hotel-management-system
+│
+├── src/main/java/com/example/hotelmanagement
+│   ├── controller/
+│   ├── model/
+│   ├── repository/
+│   ├── service/
+│   └── HotelManagementSystemApplication.java
+│
+├── src/main/resources/
+│   ├── templates/
+│   │   ├── index.html
+│   │   ├── login.html
+│   │   ├── room-list.html
+│   │   └── booking.html
+│   ├── application.properties
+│
+└── pom.xml
