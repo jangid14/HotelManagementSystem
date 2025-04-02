@@ -1,0 +1,9 @@
+hotel-management-system
+├── src/main/resources
+│   ├── templates
+│   │   ├── index.html
+│   │   ├── login.html
+│   │   ├── room-list.html
+│   │   ├── booking.html
+│   │   ├── register.html
+│   │   └── 404.html
